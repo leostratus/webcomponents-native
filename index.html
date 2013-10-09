@@ -1,9 +1,100 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<title><del>Re-combobulated</del>Web-componentized Kittens</title>
-	<link rel="icon" href=""/>
+		<title>Web Components Examples</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			ul {
+				list-style: none;
+				display: block;
+				width: 75%;
+				margin: 0 auto;
+			}
+
+			ul li {
+				float: left;
+				padding: 0 5% 5% 0;
+			}
+
+			ul li img {
+				float: left;
+			}
+
+			ul li span {
+				display: block;
+				text-align: center;
+			}
+
+			input[type="checkbox"] {
+				display: block;
+				margin: 0 auto;
+			}
+		</style>
 	</head>
 	<body>
+		<h1>Web Components Examples</h1>
+		<p>A small collection of examples of various features of web components in action. No frameworks or sugar, just a polyfill for the basics presumably the way a browser would implement them according to the W3C specifications, an exmplanation of which <a href="#">can be found here</a>.</p>
+
+		<h2>Let's remix some cats.</h2>
+		<p>Please select the cats you find lovely.</p>
+		<div id="example-1">
+			<form id="remix-cats">
+	            <ul id="kittens">
+	                <li>
+	                	<span>Cat #1</span>
+	                	<input type="checkbox" name="cats" value="1">
+						<img src="http://lorempixel.com/300/300/cats/1/">
+	                </li>
+	                <li>
+						<span>Cat #2</span>
+						<input type="checkbox" name="cats" value="2">
+						<img src="http://lorempixel.com/300/300/cats/3/">
+	                </li>  
+	                <li>
+						<span>Cat #3</span>
+						<input type="checkbox" name="cats" value="3">
+						<img src="http://lorempixel.com/300/300/cats/3/">
+	                </li>
+	                <li>
+						<span>Cat #4</span>
+						<input type="checkbox" name="cats" value="4">
+						<img src="http://lorempixel.com/300/300/cats/4/">
+	                </li>
+	                <li>
+						<span>Cat #5</span>
+						<input type="checkbox" name="cats" value="5">
+						<img src="http://lorempixel.com/300/300/cats/5/">
+	                </li> 
+	                <li>
+						<span>Cat #6</span>
+						<input type="checkbox" name="cats" value="6">
+						<img src="http://lorempixel.com/300/300/cats/6/">
+	                </li> 
+	                <li>
+						<span>Cat #7</span>
+						<input type="checkbox" name="cats" value="7">
+						<img src="http://lorempixel.com/300/300/cats/7/">
+	                </li>
+	                <li>
+						<span>Cat #8</span>
+						<input type="checkbox" name="cats" value="8">
+						<img src="http://lorempixel.com/300/300/cats/8/">
+	                </li>
+	                <li>
+						<span>Cat #9</span>
+						<input type="checkbox" name="cats" value="9">
+						<img src="http://lorempixel.com/300/300/cats/9/">
+	                </li>
+	                <li>
+						<span>Cat #10</span>
+						<input type="checkbox" name="cats" value="10">
+						<img src="http://lorempixel.com/300/300/cats/10/">
+	                </li>                                                   
+	            </ul>
+        	</form>
+		</div>
 	</body>
 </html>
