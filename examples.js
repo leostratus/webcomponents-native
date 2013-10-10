@@ -83,22 +83,25 @@ function appendCats(){
 }
 
 function appendCatsFromImport(){
+	// Grab the imported document
+	var link = document.querySelector('link[rel=import]');
+
+	// Grab the template from the imported document
+	var template = link.import.getElementById('#import-cats-template');
+
 	// A div to host an instance of our cats template
 	var el = document.createElement('div');
 
-	// The element that we will append each instance of the cats template to
-
+	// The element that we will append each div of the cats template to
 	var imported_cats = document.getElementById('imported-cats');
 
 	// Create a shadow root
 	var shadow = el.webkitCreateShadowRoot();
 
 	// We append the content of our template to the shadow root
-	shadow.appendChild(document.getElementById('import-cats-template').content);
+	shadow.appendChild(template.content);
 
 	// We append our newly formed div with template content to the DOM
 	imported_cats.appendChild(el);
 
-	// TODO: Figure out why when we append more than one div of shadow-cats, we don't see multiples despite their existence in the DOM
-	// Probably I'm missing something obvious here in my post-sick fugue or something
 }
