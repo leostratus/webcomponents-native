@@ -1,0 +1,30 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+ul {
+	list-style: none;
+	display: block;
+	width: 75%;
+	margin: 0 auto;
+}
+
+ul li {
+	float: left;
+	padding: 0 5% 5% 0;
+}
+
+ul li img {
+	float: left;
+}
+
+ul li span {
+	display: block;
+	text-align: center;
+}
+
+input[type="checkbox"], input[type="submit"] {
+	display: block;
+	clear: both;
+	margin: 0 auto;
+}

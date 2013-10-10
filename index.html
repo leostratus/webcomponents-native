@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Web Components Examples</title>
+		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" /> 
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<link rel="import" href="import-cats.html">
+	</head>
+	<body>
+		<h1>Web Components Examples</h1>
+		<p>A small collection of examples of various features of web components (Shadow DOM, the &lt;template&gt; tag, and HTML Imports) in action. Chrome only. No sugar.</p>
+
+		<h2>Example 1: Let's remix some cats.</h2>
+
+		<p>Please select the cats you find lovely.</p>
+
+		<div id="example-1">
+			<form id="remix-cats">
+	            <ul id="cats">
+	                <li>
+	                	<span>Cat #1</span>
+	                	<input type="checkbox" name="cats" value="1">
+						<img src="http://lorempixel.com/300/300/cats/1/">
+	                </li>
+	                <li>
+						<span>Cat #2</span>
+						<input type="checkbox" name="cats" value="2">
+						<img src="http://lorempixel.com/300/300/cats/3/">
+	                </li>  
+	                <li>
+						<span>Cat #3</span>
+						<input type="checkbox" name="cats" value="3">
+						<img src="http://lorempixel.com/300/300/cats/3/">
+	                </li>
+	                <li>
+						<span>Cat #4</span>
+						<input type="checkbox" name="cats" value="4">
+						<img src="http://lorempixel.com/300/300/cats/4/">
+	                </li>
+	                <li>
+						<span>Cat #5</span>
+						<input type="checkbox" name="cats" value="5">
+						<img src="http://lorempixel.com/300/300/cats/5/">
+	                </li> 
+	                <li>
+						<span>Cat #6</span>
+						<input type="checkbox" name="cats" value="6">
+						<img src="http://lorempixel.com/300/300/cats/6/">
+	                </li> 
+	                <li>
+						<span>Cat #7</span>
+						<input type="checkbox" name="cats" value="7">
+						<img src="http://lorempixel.com/300/300/cats/7/">
+	                </li>
+	                <li>
+						<span>Cat #8</span>
+						<input type="checkbox" name="cats" value="8">
+						<img src="http://lorempixel.com/300/300/cats/8/">
+	                </li>
+	                <li>
+						<span>Cat #9</span>
+						<input type="checkbox" name="cats" value="9">
+						<img src="http://lorempixel.com/300/300/cats/9/">
+	                </li>                                                 
+	            </ul>
+	            <input type="submit" value="Choose Cats">
+        	</form>
+		</div>
+
+		<h2>Example 2: Let's append some cats using a &lt;template&gt;</h2>
+		<p>Click 'Append Cats', and.. cats are appended via the template included at the bottom of this HTML document. Magic shadow cats!</p>
+
+		<div id="example-2">
+			<div id="future-cats">
+			</div>
+			<form id="append-cats">
+				<input type="submit" value="Append Cats">
+			</form>
+		</div>
+
+		<h2>Example 3: Let's append some cats using a &lt;template&gt; included via an HTML Import</h2>
+		<p>Click 'Import Cats' and we'll append some cats to the DOM in the same way as the second example, only using a template loaded via an HTML Import.</p>
+
+		<div id="example-3">
+			<div id="imported-cats">
+			</div>
+			<form id="import-cats">
+				<input type="submit" value="Import Cats">
+			</form>
+		</div>
+		<!-- Template for Example #2 -->
+
+		<template id="cats-template">
+			<style type="text/css">
+				ul {
+					list-style-type: none;
+				}
+				ul li {
+					padding: 2%;
+					border-radius: 10px;
+					border: 2px dashed blue;
+					float: left;
+					margin: 0 5% 5% 0;
+				}
+			</style>
+			<ul>
+				<li><img src="http://lorempixel.com/300/300/cats/3/"></li>
+				<li><img src="http://lorempixel.com/300/300/cats/6/"></li>
+				<li><img src="http://lorempixel.com/300/300/cats/9/"></li>
+			</ul>
+		</template>
+
+		<div id="scripts">
+			<script type="text/javascript" src="examples.js"></script>
+		</div>
+	</body>
+</html>
