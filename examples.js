@@ -102,6 +102,6 @@ function appendCatsFromImport(){
 	shadow.appendChild(template.content);
 
 	// We append our newly formed div with template content to the DOM
-	imported_cats.appendChild(el);
+	imported_cats.appendChild(el); 
 
 }
