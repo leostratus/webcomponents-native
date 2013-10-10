@@ -87,7 +87,7 @@ function appendCatsFromImport(){
 	var link = document.querySelector('link[rel=import]');
 
 	// Grab the template from the imported document
-	var template = link.import.getElementById('#import-cats-template');
+	var template = link.import.getElementById('import-cats-template');
 
 	// A div to host an instance of our cats template
 	var el = document.createElement('div');
