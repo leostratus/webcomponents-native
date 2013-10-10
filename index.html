@@ -2,47 +2,18 @@
 <html>
 	<head>
 		<title>Web Components Examples</title>
-		<style type="text/css">
-			* {
-				margin: 0;
-				padding: 0;
-			}
-			ul {
-				list-style: none;
-				display: block;
-				width: 75%;
-				margin: 0 auto;
-			}
-
-			ul li {
-				float: left;
-				padding: 0 5% 5% 0;
-			}
-
-			ul li img {
-				float: left;
-			}
-
-			ul li span {
-				display: block;
-				text-align: center;
-			}
-
-			input[type="checkbox"] {
-				display: block;
-				margin: 0 auto;
-			}
-		</style>
+		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" /> 
+		<link rel="stylesheet" type="text/css" href="styles.css">
 	</head>
 	<body>
 		<h1>Web Components Examples</h1>
-		<p>A small collection of examples of various features of web components in action. No frameworks or sugar, just a polyfill for the basics presumably the way a browser would implement them according to the W3C specifications, an exmplanation of which <a href="#">can be found here</a>.</p>
+		<p>A small collection of examples of various features of web components in action. Chrome only.</p>
 
 		<h2>Let's remix some cats.</h2>
 		<p>Please select the cats you find lovely.</p>
 		<div id="example-1">
 			<form id="remix-cats">
-	            <ul id="kittens">
+	            <ul id="cats">
 	                <li>
 	                	<span>Cat #1</span>
 	                	<input type="checkbox" name="cats" value="1">
@@ -87,14 +58,13 @@
 						<span>Cat #9</span>
 						<input type="checkbox" name="cats" value="9">
 						<img src="http://lorempixel.com/300/300/cats/9/">
-	                </li>
-	                <li>
-						<span>Cat #10</span>
-						<input type="checkbox" name="cats" value="10">
-						<img src="http://lorempixel.com/300/300/cats/10/">
-	                </li>                                                   
+	                </li>                                                 
 	            </ul>
+	            <input type="submit" value="Choose Cats">
         	</form>
 		</div>
+	<div id="scripts">
+		<script type="text/javascript" src="examples.js"></script>
+	</div>
 	</body>
 </html>
