@@ -1,31 +1,23 @@
-/*
- * Some examples of web components in action, no frameworks, just platform polyfills via Polymer Project's work
- */
-
-// For the first example, we're going to programmatically remix an unordered list of cats using Shadow DOM
-// and <content> insertion points
-
 window.addEventListener("load", function ()
 {
+	// Hijack form submissions to play with things in the page instead
+
     document.getElementById("remix-cats").addEventListener("submit", function (event)
     {
-    	// Hijack form submission to play with things
         event.preventDefault();
         remixCats();
     }, false);
 
     document.getElementById("append-cats").addEventListener("submit", function (event)
     {
-    	// Hijack form submission to play with things
         event.preventDefault();
         appendCats();
     }, false);
 
     document.getElementById("import-cats").addEventListener("submit", function (event)
     {
-    	// Hijack form submission to play with things
         event.preventDefault();
-        appendCatsFromImport();
+        importCats();
     }, false);
 }, false);
 
@@ -82,18 +74,18 @@ function appendCats(){
 	// Probably I'm missing something obvious here in my post-sick fugue or something
 }
 
-function appendCatsFromImport(){
+function importCats(){
 	// Grab the imported document
 	var link = document.querySelector('link[rel=import]');
 
 	// Grab the template from the imported document
 	var template = link.import.getElementById('import-cats-template');
 
-	// A div to host an instance of our cats template
-	var el = document.createElement('div');
-
 	// The element that we will append each div of the cats template to
 	var imported_cats = document.getElementById('imported-cats');
+
+	// A div to host an instance of our cats template
+	var el = document.createElement('div');
 
 	// Create a shadow root
 	var shadow = el.webkitCreateShadowRoot();
