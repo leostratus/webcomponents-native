@@ -52,7 +52,7 @@ function remixCats(){
 	var host = document.getElementById('cats');
 
 	// Create a shadow root
-	var shadow = host.webkitCreateShadowRoot();
+	var shadow = host.createShadowRoot();
 
 	// Set the innerHTML of our shadow root, thus causing the replacement of example-1's rendering
 	// to be that of our shadow root using our remixed cats markup string
@@ -70,7 +70,7 @@ function appendCats(){
 	var future_cats = document.getElementById('future-cats');
 
 	// Create a shadow root
-	var shadow = el.webkitCreateShadowRoot();
+	var shadow = el.createShadowRoot();
 
 	// We append the content of our template to the shadow root
 	shadow.appendChild(document.getElementById('cats-template').content);
@@ -91,7 +91,7 @@ function appendCatsFromImport(){
 	var imported_cats = document.getElementById('imported-cats');
 
 	// Create a shadow root
-	var shadow = el.webkitCreateShadowRoot();
+	var shadow = el.createShadowRoot();
 
 	// We append the content of our template to the shadow root
 	shadow.appendChild(document.getElementById('import-cats-template').content);
